@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Listar chamados</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+   <ion-item *ngFor="let chamado of chamados" (click)="carregar_detalhes(chamado.id)">
+    <h1 class="id">{{chamado.id}}</h1>
+    <p class="dia">{{chamado.dia_horario}}</p>
+  </ion-item>
+</ion-content>
